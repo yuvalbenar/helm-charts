@@ -25,7 +25,7 @@ jobs:
 
       - name: Update Helm Chart Version
         run: |
-          cd charts/terraflaskqlk8s-chart
+          cd C:\Users\yuval\helm-charts\flasksql-chart-0.1.0.tgz
           sed -i "s/version: .*/version: 0.0.${{ github.run_number }}/g" Chart.yaml
           echo "# Auto-updated by CI workflow" >> Chart.yaml
 
