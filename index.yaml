@@ -1,4 +1,4 @@
-apiVersion: v1 #yeah boi
+apiVersion: v1 #d
 entries:
   flasksql-chart:
   - apiVersion: v2
