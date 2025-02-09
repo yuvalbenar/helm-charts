@@ -1,4 +1,4 @@
-name: Helm Chart CI yeah
+name: Helm Chart CI
 
 on:
   push:
@@ -37,27 +37,26 @@ jobs:
 
       - name: Update Helm Repo Index
         run: |
-          helm repo index --url https://yuvalbenar.github.io/helm-charts/ .
+          helm repo index --url https://yuvalbenar.github.io/helm-charts/ .  # Ensure the index URL matches the GitHub Pages URL
           ls -lrta
+
+      - name: Move Helm Chart and Index to docs Directory
+        run: |
+          # Move the .tgz files and index.yaml into the docs directory for GitHub Pages
+          mkdir -p docs
+          mv *.tgz docs/
+          mv index.yaml docs/
+          ls -lrta docs/
 
       - name: Push Helm Chart to Repository
         env:
           HELM_REPO_PAT: ${{ secrets.HELM_REPO_PAT }}
         run: |
-          git clone https://${HELM_REPO_PAT}@github.com/yuvalbenar/helm-charts.git helmrepo
-          cd helmrepo
-          pwd
-
           git config --global user.name "github-actions-bot"
           git config --global user.email "github-actions@github.com"
 
-          rm -f *.tgz && rm -f index.yaml
-          cp ../*.tgz .
-          cp ../index.yaml .
-          ls -lrta
-
-          git add .
-          git commit -m "Updated Helm chart to version 0.0.${{ github.run_number }}"
+          git add docs/*
+          git commit -m "Updated Helm charts and index.yaml"
           git push origin main
 
-          echo "Helm chart successfully updated!"
+          echo "Helm chart successfully updated in /docs!"
