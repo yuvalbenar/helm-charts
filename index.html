@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuval's Helm Charts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Yuval's Helm Charts</h1>
+    </header>
+
+    <div class="container">
+        <h2>Available Helm Charts</h2>
+        <p>Here you can find the Helm charts for deploying various applications to Kubernetes.</p>
+
+        <ul>
+            <li><a href="https://yuvalbenar.github.io/helm-charts/terraflaskqlk8s-chart-0.1.0.tgz">TerraFlaskK8s Chart (0.1.0)</a></li>
+            <!-- Add other charts as you update them -->
+        </ul>
+
+        <h2>How to Use</h2>
+        <p>To install a chart, use the following command:</p>
+        <pre>helm repo add yuval https://yuvalbenar.github.io/helm-charts/</pre>
+        <pre>helm install <chart-name> yuval/<chart-name></pre>
+
+        <h2>Get in Touch</h2>
+        <p>If you have any questions or need support, feel free to open an issue on the <a href="https://github.com/yuvalbenar/helm-charts">GitHub repository</a>.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Yuval Benar. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
