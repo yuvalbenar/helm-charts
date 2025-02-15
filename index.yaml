@@ -3,9 +3,9 @@ entries:
   flasksql-chart:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2025-02-15T21:45:46.721172458Z"
+    created: "2025-02-15T21:54:49.048756481Z"
     description: A Helm chart for deploying a Flask application with a MySQL backend.
-    digest: b0d5f7344e3fbcad5893d362c29c3c3716d74835154af41aa7f6dee423610db4
+    digest: 10f134094ffb14a2f9a2468a282cbf3fb6c75e291f786fce545df66b50a7a2de
     home: https://github.com/yuvalbenar/terraflaskqlk8s/tree/k8sdeploy
     keywords:
     - flask
@@ -20,6 +20,6 @@ entries:
     - https://github.com/yuvalbenar/terraflaskqlk8s/tree/k8sdeploy
     type: application
     urls:
-    - https://yuvalbenar.github.io/helm-charts/flasksql-chart-0.0.48.tgz
-    version: 0.0.48
-generated: "2025-02-15T21:45:46.720416529Z"
+    - https://yuvalbenar.github.io/helm-charts/flasksql-chart-0.0.49.tgz
+    version: 0.0.49
+generated: "2025-02-15T21:54:49.047614899Z"
